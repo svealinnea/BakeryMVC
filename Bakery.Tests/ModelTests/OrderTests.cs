@@ -27,6 +27,13 @@ namespace Bakery.Tests
       Assert.AreEqual(updatedTitle, result);
     }
     [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { }; 
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
     public void GetAll_ReturnListOfOrderObjectsInstatiated_OrderList()
     {
       string newTitle = "Order 1";
@@ -38,8 +45,6 @@ namespace Bakery.Tests
       List<Order> orderList = new List<Order> {newOrder};
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(orderList, result);
-
     }
-
   }
 }

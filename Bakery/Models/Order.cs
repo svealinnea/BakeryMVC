@@ -17,5 +17,9 @@ namespace Bakery.Models
     Price = price; 
     Date = date;
   }
+  public static List<Order> GetAll()
+  {
+    return _orderList;
+  }
   }
 }
