@@ -17,6 +17,7 @@ namespace Bakery.Models
     Description = description;
     _vendorsList.Add(this);
     Id = _vendorsList.Count;
+    Orders = new List<Order>{};
 
   }
   public static List<Vendor> GetAll()
@@ -30,6 +31,10 @@ namespace Bakery.Models
   public static void ClearAll()
   {
     _vendorsList.Clear();
+  }
+  public void AddOrder(Order order)
+  {
+    Orders.Add(order);
   }
   }
 }

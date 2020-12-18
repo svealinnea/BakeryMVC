@@ -21,5 +21,9 @@ namespace Bakery.Models
   {
     return _orderList;
   }
+  public static void ClearAll()
+  {
+    _orderList.Clear();
+  }
   }
 }

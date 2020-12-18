@@ -41,8 +41,14 @@ namespace Bakery.Tests
       int price = 15; 
       int date = 011120;
 
+      string newTitle2 = "Order 2";
+      string newDescription2 = "Ordered 10 loafs of bread";
+      int price2 = 30; 
+      int date2 = 011520;
+
+      Order newOrder2 = new Order(newTitle2, newDescription2, price2, date2);
       Order newOrder = new Order(newTitle, newDescription, price, date);
-      List<Order> orderList = new List<Order> {newOrder};
+      List<Order> orderList = new List<Order> {newOrder, newOrder2};
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(orderList, result);
     }
