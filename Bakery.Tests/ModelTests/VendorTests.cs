@@ -16,14 +16,15 @@ namespace Bakery.Tests
     [TestMethod]
     public void VendorConstructor_CreateInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test string");
+      Vendor newVendor = new Vendor("test string", "test string");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
-    public void GetName_ReturnsName_String()
+    public void GetName_ReturnsNameAndDescription_String()
     {
       string name = "Suzies Bakery";
-      Vendor newVendor = new Vendor(name);
+      string description = "local bakery in NW Portland";
+      Vendor newVendor = new Vendor(name,description);
       string result = newVendor.VendorName;
       Assert.AreEqual(name, result);
     }
@@ -31,7 +32,8 @@ namespace Bakery.Tests
     public void SetName_SetName_String()
     {
     string name = "Suzies Bakery";
-    Vendor newVendor = new Vendor(name);
+    string description = "local bakery in NW Portland";
+    Vendor newVendor = new Vendor(name, description);
 
     string updatedName = "Joes Bagel Factory";
     newVendor.VendorName = updatedName; 
