@@ -65,13 +65,13 @@ namespace Bakery.Tests
     }
     public void Find_ReturnsCorrect_Vendor()
     {
-            string vendor01 = "Suzies Balkery";
+      string vendor01 = "Suzies Balkery";
       string vendor02 = "Joes Bagels Factory";
       string description01 = "local bakery";
       string description02 = "local bakery";
       Vendor newVendor1 = new Vendor(vendor01, description01);
       Vendor newVendor2 = new Vendor(vendor02, description02);
-      Vendor result = Vendor.Find(2);
+      Vendor result = Vendor.Find(5);
       Assert.AreEqual(newVendor2, result);
     }
   }
