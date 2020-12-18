@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 using System;
 
 namespace Bakery.Tests
@@ -26,5 +26,20 @@ namespace Bakery.Tests
 
       Assert.AreEqual(updatedTitle, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnListOfOrderObjectsInstatiated_OrderList()
+    {
+      string newTitle = "Order 1";
+      string newDescription = "Ordered 5 loafs of bread";
+      int price = 15; 
+      int date = 011120;
+
+      Order newOrder = new Order(newTitle, newDescription, price, date);
+      List<Order> orderList = new List<Order> {newOrder};
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(orderList, result);
+
+    }
+
   }
 }
