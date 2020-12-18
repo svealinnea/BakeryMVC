@@ -49,7 +49,7 @@ namespace Bakery.Tests
       CollectionAssert.AreEqual(newList, result);
     }
         [TestMethod]
-    public void GetSVendors_ReturnsAllVendorObjects_VendorList()
+    public void GetVendors_ReturnsAllVendorObjects_VendorList()
     {
       string vendor01 = "Suzies Balkery";
       string vendor02 = "Joes Bagel Factory";
@@ -62,6 +62,17 @@ namespace Bakery.Tests
       List<Vendor> result = Vendor.GetAll();
 
       CollectionAssert.AreEqual(newVendorsList, result);
+    }
+    public void Find_ReturnsCorrect_Vendor()
+    {
+            string vendor01 = "Suzies Balkery";
+      string vendor02 = "Joes Bagel Factory";
+      string description01 = "local bakery";
+      string description02 = "local bakery";
+      Vendor newVendor1 = new Vendor(vendor01, description01);
+      Vendor newVendor2 = new Vendor(vendor02, description02);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
     }
   }
 }
