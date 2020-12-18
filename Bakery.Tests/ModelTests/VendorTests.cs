@@ -7,8 +7,12 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class VendorTests 
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_CreateInstanceOfVendor_Vendor()
     {
@@ -34,6 +38,13 @@ namespace Bakery.Tests
     string result = newVendor.VendorName;
 
     Assert.AreEqual(updatedName, result);
+    }
+    [TestMethod]
+    public void GettAll_ReturnsAnEmptyList_VendorList()
+    {
+      List<Vendor> newList = new List<Vendor> {}; 
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
