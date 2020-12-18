@@ -70,7 +70,7 @@ namespace Bakery.Tests
       string description = "a local bakery"; 
       Vendor newVendor = new Vendor(vendorName, description);
       int result = newVendor.Id; 
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(1, result);
     }
     [TestMethod]
     public void Find_ReturnsCorrect_Vendor()
@@ -81,7 +81,7 @@ namespace Bakery.Tests
       string description02 = "local bakery";
       Vendor newVendor1 = new Vendor(vendor01, description01);
       Vendor newVendor2 = new Vendor(vendor02, description02);
-      Vendor result = Vendor.Find(5);
+      Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
   }
