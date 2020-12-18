@@ -8,6 +8,7 @@ namespace Bakery.Models
     public string Description { get; set; }
     public int Price { get; set; }
     public int Date { get; set; }
+    public int Id { get; }
     private static List<Order> _orderList = new List<Order> {};
 
   public Order(string title, string description, int price, int date)
@@ -16,10 +17,15 @@ namespace Bakery.Models
     Description = description;
     Price = price; 
     Date = date;
+    Id = _orderList.Count;
   }
   public static List<Order> GetAll()
   {
     return _orderList;
+  }
+  public static Order Find(int Id)
+  {
+    return _orderList[Id-1];
   }
   public static void ClearAll()
   {
