@@ -23,5 +23,17 @@ namespace Bakery.Tests
       string result = newVendor.VendorName;
       Assert.AreEqual(name, result);
     }
+    [TestMethod]
+    public void SetName_SetName_String()
+    {
+    string name = "Suzies Bakery";
+    Vendor newVendor = new Vendor(name);
+
+    string updatedName = "Joes Bagel Factory";
+    newVendor.VendorName = updatedName; 
+    string result = newVendor.VendorName;
+
+    Assert.AreEqual(updatedName, result);
+    }
   }
 }
