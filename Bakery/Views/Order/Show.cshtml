@@ -4,8 +4,8 @@
 @using Bakery.Models;
 <h1>Here are all the orders this Vendor has placed</h1>
 <ol>
-  @foreach (Order order in @Model["orders"])
+  @foreach (Order orders in @Model["orders"])
   {
-    <li><a href='/vendors/@Model["vendor"].Id/orders'>@order.Title</a></li>
+    <li><a href='/vendors/@Model["vendor"].Id/orders'>@orders.Title</a></li>
   }
 </ol>
