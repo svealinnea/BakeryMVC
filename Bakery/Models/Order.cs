@@ -23,9 +23,9 @@ namespace Bakery.Models
   {
     return _orderList;
   }
-  public static Order Find(int Id)
+  public static Order Find(int id)
   {
-    return _orderList[Id-1];
+    return _orderList[id-1];
   }
   public static void ClearAll()
   {

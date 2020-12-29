@@ -5,7 +5,7 @@ namespace Bakery.Models
 {
   public class Vendor
   {
-    private static List<Vendor> _vendorsList = new List<Vendor> {};
+    private static List<Vendor> _vendorsList = new List<Vendor> { };
     public string VendorName { get; set; }
     public string Description { get; set; }
     public int Id { get; }
@@ -17,7 +17,7 @@ namespace Bakery.Models
     Description = description;
     _vendorsList.Add(this);
     Id = _vendorsList.Count;
-    Orders = new List<Order>{};
+    Orders = new List<Order>{ };
 
   }
   public static List<Vendor> GetAll()
