@@ -1,5 +1,15 @@
 @{
   Layout = "_Layout";
 }
+@using Bakery.Models;
 
 <h1>Order details</h1>
+<ol>
+  <h3>Vendor: @Model["vendor"].VendorName</h3>
+  <h4>Order Title: @Model["order"].OrderTitle</h4>
+  <h4>Order Description: @Model["order"].OrderDescription</h4>
+  <h4>Order Price: $ @Model["order"].OrderPrice</h4>
+</ol>
+
+<h2><a href="/vendors">Vendors Page</a></h2>
+<h2><a href="/">Phone Home!</a></h2>
