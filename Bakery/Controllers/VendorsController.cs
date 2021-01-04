@@ -27,22 +27,24 @@ namespace Bakery.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/vendors/{vendorid}")]
-    public ActionResult Show(int id)
+    [HttpGet("/vendors/{vendorId}/orders")]
+    public ActionResult Show(int vendorId)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor selectedVendor = Vendor.Find(id);
+      Vendor selectedVendor = Vendor.Find(vendorId);
       List<Order> vendorOrders = selectedVendor.Orders;
-      model.Add("vendor", "selectedVendor");
-      model.Add("orders", "vendorOrders");
+      model.Add("vendor", selectedVendor);
+      model.Add("orders", vendorOrders);
       return View(model);
     }
-    [HttpGet("/vendors/{vendorId}/orders")]
-    public ActionResult Show()
-    {
-      List<Order> theOrders = Order.GetAll();
-      return View(theOrders);
-    }
+
+    // [HttpGet("/vendors/{vendorId}/orders")]
+    // public ActionResult Show()
+    // {
+    //   List<Order> theOrders = Order.GetAll();
+    //   return View(theOrders);
+    // }
+
     [HttpPost("/vendors/{vendorid}/orders")]
     public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice)
     {
