@@ -7,15 +7,16 @@ namespace Bakery.Models
     public string OrderTitle { get; set; }
     public string OrderDescription { get; set; }
     public int OrderPrice { get; set; }
-    // public int OrderDate { get; set; }
+    public string OrderDate { get; set; }
     public int OrderId { get; }
     private static List<Order> _orderList = new List<Order> { };
 
-    public Order(string orderTitle, string orderDescription, int orderPrice)
+    public Order(string orderTitle, string orderDescription, int orderPrice, string orderDate)
     {
       OrderTitle = orderTitle;
       OrderDescription = orderDescription;
       OrderPrice = orderPrice; 
+      OrderDate = orderDate;
       _orderList.Add(this);
       OrderId = _orderList.Count;
     }

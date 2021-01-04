@@ -15,14 +15,14 @@ namespace Bakery.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("", "",5);
+      Order newOrder = new Order("", "",5, "");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
     public void SetTitle_ReturnsTitle_String()
     {
       string title = "vendor order 1";
-      Order newOrder = new Order(title, "", 0); 
+      Order newOrder = new Order(title, "", 0, ""); 
 
       string updatedTitle = "vendor order 2";
       newOrder.OrderTitle = updatedTitle;
@@ -46,8 +46,10 @@ namespace Bakery.Tests
       string newDescription2 = "Ordered 20 loafs of bread";
       int newPrice = 15; 
       int newPrice2 = 60;
-      Order newOrder = new Order(newTitle, newDescription, newPrice);
-      Order newOrder2 = new Order(newTitle2, newDescription2, newPrice2);
+      string newDate = "09191995";
+      string newDate2 = "01122020";
+      Order newOrder = new Order(newTitle, newDescription, newPrice, newDate);
+      Order newOrder2 = new Order(newTitle2, newDescription2, newPrice2, newDate2);
       List<Order> orderList = new List<Order> { newOrder, newOrder2 };
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(orderList, result); 
