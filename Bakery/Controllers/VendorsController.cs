@@ -38,13 +38,6 @@ namespace Bakery.Controllers
       return View(model);
     }
 
-    // [HttpGet("/vendors/{vendorId}/orders")]
-    // public ActionResult Show()
-    // {
-    //   List<Order> theOrders = Order.GetAll();
-    //   return View(theOrders);
-    // }
-
     [HttpPost("/vendors/{vendorid}/orders")]
     public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice, string orderDate)
     {

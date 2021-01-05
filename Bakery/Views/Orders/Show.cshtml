@@ -3,6 +3,7 @@
 }
 @using Bakery.Models;
 
+<div class="container">
 <h1>Order details</h1>
 <ol>
   <h3>Vendor: @Model["vendor"].VendorName</h3>
@@ -12,5 +13,6 @@
   <h4>Order Date: @Model["order"].OrderDate</h4>
 </ol>
 
-<h2><a href="/vendors">Vendors Page</a></h2>
-<h2><a href="/">Phone Home!</a></h2>
+<p><a href="/vendors">Vendors Page</a></p>
+<p><a href="/">Phone Home!</a></p>
+</div>

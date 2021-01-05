@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 
+<div class="container">
 <h1>New order for: @Model.VendorName</h1>
 <form action="/vendors/@Model.VendorId/orders" method= "post">
   <label for="orderTitle">Enter The Orders Title: </label>
@@ -21,3 +22,4 @@
 
 <h4><a href="/vendors">Vendors Page</a></h4>
 <h4><a href="/">Phone Home!</a></h4>
+</div>

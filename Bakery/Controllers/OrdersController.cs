@@ -8,13 +8,6 @@ namespace Bakery.Controllers
 {
   public class OrdersController : Controller
   {
-    // [HttpGet("/vendors/{vendorId}/orders")]
-    // public ActionResult Index()
-    // {
-    //   List<Order> theOrders = Order.GetAll();
-    //   return View(theOrders);
-    // }
-
     [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
