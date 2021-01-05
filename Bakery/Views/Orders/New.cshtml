@@ -3,23 +3,26 @@
 }
 
 <div class="container">
-<h1>New order for: @Model.VendorName</h1>
+<h1>Orders Page</h1>
+<h3>New Order for: @Model.VendorName</h3>
 <form action="/vendors/@Model.VendorId/orders" method= "post">
   <label for="orderTitle">Enter The Orders Title: </label>
   <input id="orderTitle" name="orderTitle" type="text">
-
+  <br>
   <label for="orderDescription">Enter The Orders Description: </label>
   <input id="orderDescription" name="orderDescription" type="text">
-
+  <br>
   <label for="orderPrice">Enter The Orders Price: </label>
   <input id="orderPrice" name="orderPrice" type="text">
-
+  <br>
   <label for="orderDate">Enter The Date: </label>
   <input id="orderDate" name="orderDate" type="text">
-  
+  <br>
+  <input type="checkbox" id="orderPaid" name="orderPaid" value="true">
+  <label for="orderPaid"> Paid </label><br>
   <button type="submit">Add this Order to @Model.VendorName</button>
 </form>
 
 <h4><a href="/vendors">Vendors Page</a></h4>
-<h4><a href="/">Phone Home!</a></h4>
+<h4><a href="/">Return Home</a></h4>
 </div>

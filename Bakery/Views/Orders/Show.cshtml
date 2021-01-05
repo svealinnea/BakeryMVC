@@ -4,15 +4,16 @@
 @using Bakery.Models;
 
 <div class="container">
-<h1>Order details</h1>
+<h2>Order Details:</h2>
 <ol>
-  <h3>Vendor: @Model["vendor"].VendorName</h3>
-  <h4>Order Title: @Model["order"].OrderTitle</h4>
-  <h4>Order Description: @Model["order"].OrderDescription</h4>
-  <h4>Order Price: $ @Model["order"].OrderPrice</h4>
-  <h4>Order Date: @Model["order"].OrderDate</h4>
+  <p>Vendor: @Model["vendor"].VendorName</p>
+  <p>Order Title: @Model["order"].OrderTitle</p>
+  <p>Order Description: @Model["order"].OrderDescription</p>
+  <p>Order Price: $ @Model["order"].OrderPrice</p>
+  <p>Order Date: @Model["order"].OrderDate</p>
 </ol>
 
+<p><a href='/vendors/@Model["vendor"].VendorId/orders/new'>Add a new Order</a></p> 
 <p><a href="/vendors">Vendors Page</a></p>
-<p><a href="/">Phone Home!</a></p>
+<p><a href="/">Return Home</a></p>
 </div>

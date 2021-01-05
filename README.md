@@ -1,14 +1,32 @@
 # _Bakery Vendor Tracker_
 
-### _C# Vendor Tracking Website, 1-03-2021_
+### _C# Vendor Tracking Website, 1-04-2021_
 
 ### By Svea Wade 
 
 ### Description
-This was a website that allows a local baker to log orders by different Vendors. 
+This is an MVC application to allow Pierre to track invoices pertaing to his vendors. 
 
+Vendors include properties for the vendor's name, a description and a list of all the orders the vendor has places. An order includes the title, the description, the price, the date and a checkbox of whether or not it was paid for.
 
+The homepage of the app at the root path (localhost:5000/) 
+
+<img align="center" src="Bakery/wwwroot/img/HomePage.png" alt="HomePage">
+
+The Vendor List page (localhost:5000/vendors)
+<img align="center" src="Bakery/wwwroot/img/VendorList.png" alt="VendorList">
+
+The Add a Vendor page (localhost:5000/vendors/new)
+<img align="center" src="Bakery/wwwroot/img/VendorNew.png" alt="VendorNew">
+
+The Vendor Order page (localhost:5000/vendors/1/orders)
+<img align="center" src="Bakery/wwwroot/img/VendorOrder.png" alt="VendorOrder">
+
+The New Order Page(localhost:5000/vendors/1/orders/new)
+<img align="center" src="Bakery/wwwroot/img/NewOrder.png" alt="NewOrder">
 ## Setup/Installation Requirements
+
+Requires .NET Core 2.2 and C# 7.3
 
 You can open it locally within your computer by cloning the repository here https://github.com/svealinnea/BakeryMVC
 
@@ -20,17 +38,12 @@ Here are some instructions on how to do so:
 4. After you clone it you will need to open it in your preferred code editor
 5. You will then want to run the command dotnet restore in order to create the packages neccesary to run the tests and also run the project in the browser.
 6. You will then want to run dotnet build followed by dotnet run if you are wanting play with the websites funtionality in the browser. 
-7. The program will then let you know where the local version is, for example Now listening on: http://localhost:5000 you will want to click on that and it will take you to the screen where the website is housed. 
+7. The program will then let you know where the local version is, for example Now listening on: http://localhost:5000 you will want to click on that and it will take you to the screen where the website is hosted. 
 
 
 ## Known Bugs
 
-There are a few bugs:
-
-RuntimeBinderException: Cannot convert type 'System.Collections.Generic.KeyValuePair<string,object>' to 'Bakery.Models.Order'
-
-RuntimeBinderException: The best overloaded method match for 'System.Collections.Generic.List<Bakery.Models.Order>.this[int]' has some invalid arguments
-
+No known bugs at the moment. 
 
 ## Support and contact details
 You can reach out to me via email <svealinneawade@gmail.com>
@@ -44,6 +57,8 @@ You can reach out to me via email <svealinneawade@gmail.com>
 * .NET Core 2.2
 * dotnet script, REPL
 * ASP.NET Core MVC
+* Razor
+* CSS
 
 
 ## Legal
